@@ -1,0 +1,92 @@
+/* ----- Menu button ----- */
+#stealthMenuButton {
+    position: relative;
+}
+
+.stealth-active-indicator {
+    width: 8px;
+    height: 8px;
+    background: red;
+    border-radius: 50%;
+    margin-left: auto;
+}
+
+/* ----- Full‑screen curtain ----- */
+#stealthCurtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+}
+
+#stealthCurtain.dismissable {
+    cursor: pointer;
+}
+
+.stealth-curtain-pin-pad {
+    background: rgba(0,0,0,0.7);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stealth-pin-display {
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 0.5em;
+    min-width: 200px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.stealth-pin-keys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.stealth-pin-keys button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background: #555;
+    color: white;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.stealth-pin-keys button.clear {
+    background: #a00;
+}
+
+.stealth-pin-keys button.submit {
+    background: #0a0;
+}
+
+/* ----- Image suppression placeholder ----- */
+img.stealth-suppressed {
+    visibility: hidden !important;
+}
+
+.stealth-img-placeholder {
+    display: inline-block;
+    background: #e0e0e0;
+    outline: 1px dashed #aaa;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
